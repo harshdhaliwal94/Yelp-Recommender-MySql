@@ -1,0 +1,18 @@
+
+1. Clean_data 			: Procedure performs data cleaning for business,review,user tables.
+
+2. analysis_proc 		: Master procedure which calls required procedures for analysis purpose in a sequence.
+
+3. validatinon_proc		: Master procedure which calls required procedures for validation purpose in a sequence.
+
+4. setup_data			: It processes all the required data for analysis into required final dataset over which we could perform analysis.
+
+5. setup_kmeans_train_data	: It takes 70% of data for analysis , normalise values so that we can directly give input to K-means algorithm.
+
+6. setup_kmeans_data2		: It takes 100% of data for validating the analysis, normalise values to give input to k-means algorithm.
+
+7. kmeans2			: It performs k-means clustering algorithm from the normalised data . Input parameter k, and a boolean flag which is 1 for training, boolean 0 for validation.
+
+8. validate_prediction		: It calculates the cluster prediction error for each cluster of users on entire dataset for predicting a user's star rating of a business using the star rating of other users in the cluster and the users average star rating.
+
+9. sample_recommend  		: It recommends upto 5 businesses for the given userid based on the highest rated businesses of cluster members.
